@@ -9,8 +9,12 @@ import AdminProducts from './pages/admin-view/products';
 import AuthLogin from './pages/auth/login';
 import AuthRegister from './pages/auth/register';
 import { Route, Routes } from 'react-router-dom';
-import ShoppingLayout from './pages/shopping-view/layout';
+import ShoppingLayout from './pages/admin-view/layout';
 import NotFound from './pages/not-found';
+import ShoppingHome from './pages/shopping-view/home';
+import ShoppingListing from './pages/shopping-view/listingPage';
+import ShoppingCheckOut from './pages/shopping-view/checkout';
+import ShoppingAccount from './pages/shopping-view/account';
 
 function App() {
   return (
@@ -27,7 +31,12 @@ function App() {
 <Route path="orders"element={<AdminOrders/>}/>
 <Route path="features"element={<AdminFeatures/>}/>
 </Route>
-<Route path="/shop" element={<ShoppingLayout/>}></Route>
+<Route path="/shop" element={<ShoppingLayout/>}>
+<Route path="home" element={<ShoppingHome/>}/>
+<Route path="listing" element={<ShoppingListing/>}/>
+<Route path="checkout" element={<ShoppingCheckOut/>}/>
+<Route path="account" element={<ShoppingAccount/>}/>
+</Route >
 <Route path="*" element={<NotFound/>}/>
           
       </Routes>
