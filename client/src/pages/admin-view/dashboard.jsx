@@ -1,10 +1,13 @@
+import AdminHeader from "@/components/admin-view/header";
 
 
 
 function AdminDashBoard()
 {
     return(
-<div>Admin dashboard</div>
+<div>Admin dashboard
+    
+</div>
     );
 }
 export default AdminDashBoard;

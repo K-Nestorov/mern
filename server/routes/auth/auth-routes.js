@@ -4,6 +4,7 @@ const { registerUser,loginUser,logOutUser,authMidlleware }=require('../../contro
 const router=express.Router();
 router.post('/register',registerUser);
 router.post('/login',loginUser);
+router.post('/logout',logOutUser);
 router.get('/check-auth',authMidlleware,(req,res)=>{
     const user=req.user;
     res.status(200).json({

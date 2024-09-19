@@ -6,7 +6,7 @@
 function AdminOrders()
 {
     return(
-<div>Admin dashboard</div>
+<div>Admin orders</div>
     );
 }
 export default AdminOrders;
